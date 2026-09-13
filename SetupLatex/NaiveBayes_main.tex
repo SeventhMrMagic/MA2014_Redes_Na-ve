@@ -1,0 +1,91 @@
+\documentclass{Academic}
+
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{graphicx}
+
+\begin{document}
+%Easy customisation of title page
+%TC:ignore
+\myabstract{\include{abstract}}
+\renewcommand{\myTitle}{Uso de Redes Bayesianas Gaussianas para comprender 
+el efecto de biomarcadores en la Enfermedad renal crónica: Un análisis probabilístico}
+\renewcommand{\MyAuthors}{%
+    Jessica Milagros Cordero Rivera$^{1}$ \quad
+    Diego Rodrigo González Ramírez$^{1}$\\[0.2em]
+    Jose Ángel Lechuga Carrasco$^{1}$ \quad
+    Julio Lizárraga Beltrán$^{1}$
+}
+
+\renewcommand{\MyAffiliations}{%
+    $^{1}$Escuela de Ingeniería y Ciencias
+}
+
+\renewcommand{\AuthorIDs}{%
+    A01647083 \;|\; A01647198 \;|\; A00228198 \;|\; A01743628
+}
+
+\renewcommand{\ShortAuthors}{Cordero Rivera et al.}
+
+\renewcommand{\Keywords}{enfermedad crónica renal, red bayesiana, red bayesiana gaussiana, asistencia médica, análisis probabilístico}
+\maketitle
+%\vspace{-1.9em}\noindent\rule{\textwidth}{1pt} %add this line if not using abstract
+\onehalfspacing
+%TC:endignore
+
+\section{Introducción} 
+
+a
+
+\section{Metodología}
+
+\subsection{Enfoque y tipo de estudio}
+Se empleó un enfoque cuantitativo, correlacional, no experimental, basado en el uso de 
+GBN para encontrar las relaciones de dependencia probabilística entre los biomarcadores.
+
+\subsection{Fuente de datos}
+
+
+\subsection{Herramientas}
+Todos los análisis probabilisticos se realizaron utilizando entorno de desarrollo 
+integrado \texttt{RStudio} (v2026.08.2), utilizando el lenguaje de programación 
+estadístico \texttt{R} (v4.5.3) \cite{R} mediante el sistema de código abierto 
+Quarto (v1.8.25), utilizando los paquetes \texttt{bnlearn} (v5.2.1)\cite{Bnlearn} 
+y \texttt{tidyverse} (v2.0.0).
+
+\subsection{Preprocesamiento}
+
+
+\subsection{Construcción y selección del modelo global}
+
+
+\subsection{Estrategia analítica para consultas probabilísticas}
+
+
+\section{Aplicación}
+
+\subsection{Resultados}
+
+
+\subsection{Discuciones}
+
+
+\section{Conclusiones}
+
+
+%TC:ignore
+%\clearpage %add new page for references
+\singlespacing
+\emergencystretch 3em
+\hfuzz 1px
+\printbibliography[heading=bibnumbered]
+
+% \clearpage
+% \begin{appendices}
+
+% \section{Here go any appendices!}
+
+% \end{appendices}
+
+%TC:endignore
+\end{document}
