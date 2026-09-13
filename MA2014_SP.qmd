@@ -91,6 +91,7 @@ sum(tokens$n)
 ```
 
 ```{r}
+##Tengo pensado hacer una separación de 70/30 =)
 et= data %>%
   select(id, Impact_Level, Sentiment, Sector, Index_Change_Percent, Trading_Volume)
 set.seed(45)
