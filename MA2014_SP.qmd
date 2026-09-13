@@ -15,6 +15,8 @@ Quarto enables you to weave together content and executable code into a finished
 ## Instalacion de librerias
 
 ```{r}
+#| eval: false
+#| echo: false
 install.packages("tidytext")
 install.packages("stringr")
 ```
@@ -25,20 +27,45 @@ install.packages("stringr")
 #| echo: false
 #| eval: false
 library("tidyverse")
-
+library("tidytext")
+library("stringr")
 ```
+
+
 ## Datos
 ```{r}
 data = read.csv("Data/financial_news.csv")
-
+head(data)
+data$Headline <- as.String(data$Headline)
 ```
 
-
-
-You can add options to executable code like this
+### Carguen el conjunto de datos en R. Exploren la distribución de la variable objetivo (nivel de impacto). Para facilitar el modelado inicial o evitar desbalances severos, pueden simplificar el problema recodificando la variable a dos categorías (por ejemplo, Impacto Alto vs Impacto Otro/Bajo) con ayuda de la función case_when(). 
 
 ```{r}
+data$Impact_Level = case_when(
+  data$Impact_Level == "High" ~ "Impacto Alto",
+  .default = "Impacto Otro/Bajo",
+  .unmatched = "default",
+)
+```
+
+
+### Utilicen la función unnest_tokens() del paquete tidytext para descomponer los titulares de noticias en palabras individuales. Remuevan las palabras comunes en inglés (stop words) utilizando el dataset integrado stop_words. Construyan la matriz de frecuencia de palabras (sparse matrix) donde cada renglón represente un titular y las columnas correspondan al vocabulario retenido.
+
+```{r}
+data$Headline |> unnest_tokens(output = word)
 
 ```
 
-The `echo: false` option disables the printing of code (only output is displayed).
+
+
+### Dividan la matriz de datos en training y test set garantizando una separación aleatoria pero reproducible (fijen una semilla con set_seed()).
+
+### Utilicen la función naive_bayes() del paquete naivebayes para entrenar el modelo con el training set, prediciendo la categoría de impacto en función de la presencia/frecuencia de las palabras en los titulares y otros factores que consideren importantes.
+
+### Reporten la accuracy, precision, recall, F1-score y matriz de confusión. Redacten la interpretación de estas métricas en el contexto financiero: ¿Qué implicaciones tiene para una o un inversionista un falso positivo (predecir impacto alto cuando no lo hay) frente a un falso negativo?
+
+### Redacten un artículo científico que incluya un abstract, introducción, descripción de los métodos que utilizaron, aplicación de los métodos al problema en cuestión, conclusiones y referencias.
+
+
+
