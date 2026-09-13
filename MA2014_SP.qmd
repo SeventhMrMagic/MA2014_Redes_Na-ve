@@ -1,0 +1,44 @@
+---
+title: "MA2014_SP"
+format: html
+editor: source
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+## Running Code
+
+
+
+## Instalacion de librerias
+
+```{r}
+install.packages("tidytext")
+install.packages("stringr")
+```
+
+
+## Librerias
+```{r}
+#| echo: false
+#| eval: false
+library("tidyverse")
+
+```
+## Datos
+```{r}
+data = read.csv("Data/financial_news.csv")
+
+```
+
+
+
+You can add options to executable code like this
+
+```{r}
+
+```
+
+The `echo: false` option disables the printing of code (only output is displayed).
