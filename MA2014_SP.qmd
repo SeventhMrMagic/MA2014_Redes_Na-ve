@@ -13,20 +13,15 @@ editor: source
 install.packages("tidytext")
 install.packages("stringr")
 ```
-```{r}
-install.packages("dplyr")
-```
 
 
 ## Librerias
 ```{r}
-#| echo: false
-#| eval: false
-library("dplyr")
+library(dplyr)
 library("tidyverse")
 library("tidytext")
 library("stringr")
-library("ggplot2")
+library(ggplot2)
 ```
 
 
@@ -41,8 +36,7 @@ head(data)
 ```{r}
 data$Impact_Level = case_when(
   data$Impact_Level == "High" ~ "Impacto Alto",
-  .default = "Impacto Medio/Bajo",
-  .unmatched = "default",
+  TRUE ~ "Impacto Medio/Bajo"
 )
 head(data)
 ```
@@ -61,14 +55,26 @@ ggplot(data, aes(x = Impact_Level)) +
 ### Utilicen la función unnest_tokens() del paquete tidytext para descomponer los titulares de noticias en palabras individuales. Remuevan las palabras comunes en inglés (stop words) utilizando el dataset integrado stop_words. Construyan la matriz de frecuencia de palabras (sparse matrix) donde cada renglón represente un titular y las columnas correspondan al vocabulario retenido.
 
 ```{r}
-tokens = unnest_tokens(data, word, Headline)
+data = data %>%
+  mutate(id = row_number())
+
+tokens = subset(unnest_tokens(data, word, Headline), select = -c(Date, Source, Market_Event, Market_Index, Index_Change_Percent, Trading_Volume, Sentiment, Sector, Impact_Level, Related_Company,News_Url))
 head(tokens)
 ```
 ```{r}
 tokens = anti_join(tokens, stop_words)
+tokens = tokens %>%
+  count(id, word)
+
 head(tokens)
 ```
 
+```{r}
+sparse_matrix = tokens %>%
+  cast_sparse(id, word, n)
+
+sparse_matrix
+```
 
 
 
