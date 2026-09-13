@@ -22,6 +22,7 @@ library("tidyverse")
 library("tidytext")
 library("stringr")
 library(ggplot2)
+ 
 ```
 
 
@@ -64,7 +65,7 @@ head(tokens)
 ```{r}
 tokens = anti_join(tokens, stop_words)
 tokens = tokens %>%
-  count(id, word)
+  count(id, word) ##Importante para reordenar
 
 head(tokens)
 ```
@@ -79,6 +80,22 @@ sparse_matrix
 
 
 ### Dividan la matriz de datos en training y test set garantizando una separación aleatoria pero reproducible (fijen una semilla con set_seed()).
+```{r}
+nrow(data)
+
+ncol(sparse_matrix)
+
+nrow(sparse_matrix)
+length(unique(tokens$word))
+sum(tokens$n)
+```
+
+```{r}
+et= data %>%
+  select(id, Impact_Level, Sentiment, Sector, Index_Change_Percent, Trading_Volume)
+set.seed(45)
+```
+
 
 ### Utilicen la función naive_bayes() del paquete naivebayes para entrenar el modelo con el training set, prediciendo la categoría de impacto en función de la presencia/frecuencia de las palabras en los titulares y otros factores que consideren importantes.
 
