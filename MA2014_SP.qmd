@@ -4,13 +4,6 @@ format: html
 editor: source
 ---
 
-## Quarto
-
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
-
-## Running Code
-
-
 
 ## Instalacion de librerias
 
@@ -20,15 +13,20 @@ Quarto enables you to weave together content and executable code into a finished
 install.packages("tidytext")
 install.packages("stringr")
 ```
+```{r}
+install.packages("dplyr")
+```
 
 
 ## Librerias
 ```{r}
 #| echo: false
 #| eval: false
+library("dplyr")
 library("tidyverse")
 library("tidytext")
 library("stringr")
+library("ggplot2")
 ```
 
 
@@ -36,7 +34,6 @@ library("stringr")
 ```{r}
 data = read.csv("Data/financial_news.csv")
 head(data)
-data$Headline <- as.String(data$Headline)
 ```
 
 ### Carguen el conjunto de datos en R. Exploren la distribución de la variable objetivo (nivel de impacto). Para facilitar el modelado inicial o evitar desbalances severos, pueden simplificar el problema recodificando la variable a dos categorías (por ejemplo, Impacto Alto vs Impacto Otro/Bajo) con ayuda de la función case_when(). 
@@ -44,18 +41,34 @@ data$Headline <- as.String(data$Headline)
 ```{r}
 data$Impact_Level = case_when(
   data$Impact_Level == "High" ~ "Impacto Alto",
-  .default = "Impacto Otro/Bajo",
+  .default = "Impacto Medio/Bajo",
   .unmatched = "default",
 )
+head(data)
+```
+
+```{r}
+ggplot(data, aes(x = Impact_Level)) +
+  geom_bar() +
+  labs(
+    title = "Distribución del nivel de impacto de la noticia",
+    x = "Categoría",
+    y = "Frecuencia"
+  )
 ```
 
 
 ### Utilicen la función unnest_tokens() del paquete tidytext para descomponer los titulares de noticias en palabras individuales. Remuevan las palabras comunes en inglés (stop words) utilizando el dataset integrado stop_words. Construyan la matriz de frecuencia de palabras (sparse matrix) donde cada renglón represente un titular y las columnas correspondan al vocabulario retenido.
 
 ```{r}
-data$Headline |> unnest_tokens(output = word)
-
+tokens = unnest_tokens(data, word, Headline)
+head(tokens)
 ```
+```{r}
+tokens = anti_join(tokens, stop_words)
+head(tokens)
+```
+
 
 
 
