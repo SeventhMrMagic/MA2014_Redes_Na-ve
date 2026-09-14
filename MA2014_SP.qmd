@@ -12,6 +12,7 @@ editor: source
 #| echo: false
 install.packages("tidytext")
 install.packages("stringr")
+install.packages("naivebayes")
 ```
 
 
@@ -91,15 +92,51 @@ sum(tokens$n)
 ```
 
 ```{r}
+
 ##Tengo pensado hacer una separación de 70/30 =)
 et= data %>%
+
   select(id, Impact_Level, Sentiment, Sector, Index_Change_Percent, Trading_Volume)
+
+palabras_df = as.data.frame(as.matrix(sparse_matrix))
+palabras_df[palabras_df > 0] = 1
+palabras_df = palabras_df %>% mutate(across(everything(), as.factor))
+palabras_df$id = as.integer(rownames(palabras_df))
+
+completo = et %>%
+  inner_join(palabras_df, by = "id") %>%
+  select(-id) %>%
+  mutate(
+    Impact_Level = as.factor(Impact_Level),
+    Sentiment = as.factor(Sentiment),
+    Sector = as.factor(Sector)
+  )
+
+```
+```{r}
 set.seed(45)
+
+train = completo %>%
+  group_by(Impact_Level) %>%
+  slice_sample(prop = 0.7) %>%
+  ungroup()
+
+test = completo %>%
+  anti_join(train)
+
+```
+```{r}
+nrow(train)+ nrow(test)== nrow(completo)
 ```
 
-
 ### Utilicen la función naive_bayes() del paquete naivebayes para entrenar el modelo con el training set, prediciendo la categoría de impacto en función de la presencia/frecuencia de las palabras en los titulares y otros factores que consideren importantes.
+```{r}
 
+library(naivebayes)
+
+modelo= naive_bayes(Impact_Level ~ ., data = train, laplace = 1)
+modelo
+```
 ### Reporten la accuracy, precision, recall, F1-score y matriz de confusión. Redacten la interpretación de estas métricas en el contexto financiero: ¿Qué implicaciones tiene para una o un inversionista un falso positivo (predecir impacto alto cuando no lo hay) frente a un falso negativo?
 
 ### Redacten un artículo científico que incluya un abstract, introducción, descripción de los métodos que utilizaron, aplicación de los métodos al problema en cuestión, conclusiones y referencias.
