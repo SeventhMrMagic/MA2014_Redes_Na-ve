@@ -8,8 +8,7 @@
 %Easy customisation of title page
 %TC:ignore
 \myabstract{\include{abstract}}
-\renewcommand{\myTitle}{Uso de Redes Bayesianas Gaussianas para comprender 
-el efecto de biomarcadores en la Enfermedad renal crónica: Un análisis probabilístico}
+\renewcommand{\myTitle}{Implementación de clasificador naïve Bayes como predictor del nivel de impacto de noticias financieras}
 \renewcommand{\MyAuthors}{%
     Jessica Milagros Cordero Rivera$^{1}$ \quad
     Diego Rodrigo González Ramírez$^{1}$\\[0.2em]
@@ -27,7 +26,7 @@ el efecto de biomarcadores en la Enfermedad renal crónica: Un análisis probabi
 
 \renewcommand{\ShortAuthors}{Cordero Rivera et al.}
 
-\renewcommand{\Keywords}{enfermedad crónica renal, red bayesiana, red bayesiana gaussiana, asistencia médica, análisis probabilístico}
+\renewcommand{\Keywords}{}
 \maketitle
 %\vspace{-1.9em}\noindent\rule{\textwidth}{1pt} %add this line if not using abstract
 \onehalfspacing
@@ -35,7 +34,68 @@ el efecto de biomarcadores en la Enfermedad renal crónica: Un análisis probabi
 
 \section{Introducción} 
 
-a
+Los mercados financieros operan alrededor de una gran cantidad continua 
+de información, modificando las expectativas de inversionistas y, por lo tanto, 
+relacionarse con cambios en precios, volumen de negociación y toma de decisiones 
+en general. Dentro de este flujo de información, las noticias financieras constituyen una fuente 
+particularmente relevante, la evidencia empírica ha mostrado que el 
+contenido lingüístico de las noticias contiene información económicamente 
+significativa. Se ha encontrado que un mayor pesimismo en los medios se 
+asocia con presión a la baja sobre los precios del mercado y con variaciones 
+en el volumen de negociación \cite{tetlock2007media}. Adicional a lo anterior, 
+se ha observado que la presencia de lenguaje negativo en noticias podía 
+aportar información sobre sus resultados contables y rendimientos 
+bursátiles posteriores \cite{tetlock2008more}. Además, se ha documentado 
+que la información contenida en las noticias puede conservar 
+capacidad predictiva sobre los rendimientos del mercado \cite{heston2017news}.
+
+Sin embargo, el análisis de noticias financieras convella varias complicaciones. 
+A diferencia de variables numéricas, como precios o rendimientos, 
+los titulares corresponden a una cadena de palabras que pueden contener 
+ambigüedad y/o dependencia del contexto. Es bien sabido en la literatura previa 
+que la orientación semántica general de una frase puede ser distinta de la 
+polaridad previa de las palabras individuales. \cite{malo2014good}. Por ello, 
+identificar si una noticia puede generar un impacto relevante en el mercado 
+constituye un problema más complejo que identificar únicamente si su lenguaje 
+es positivo, negativo o neutral.
+
+
+El clasificador Naïve Bayes es un algoritmo de aprendizaje automático supervisado que se utiliza para tareas de 
+clasificación, como la clasificación de texto. Su funcionamiento parte 
+de la estimación de la probabilidad de pertenencia a una clase a partir 
+de las características observadas y de una hipótesis simplificadora de 
+independencia condicional entre los predictores \cite{kavlakoglu_naivebayes}. %67 XD
+En aplicaciones de cadenas de texto, las palabras pueden representarse 
+mediante su frecuencia dentro de cada obvservación. Se ha mostrado que el modelo 
+multinomial de Naïve Bayes presenta un comportamiento efectivo para tareas 
+de clasificación de texto basadas en frecuencias de palabras \cite{mccallum1998comparison}. 
+Su simplicidad omputacional, capacidad para trabajar con matrices dispersas y fácil 
+interpretación hacen de este algoritmo uno apropiado para estudiar titulares financieros. 
+Además, ya se han aplicado modelos Naïve Bayes sobre información de noticias 
+financieras y se encontró que ésta permitía predecir con mayor precisión 
+la dirección de cambios en la volatilidad que la dirección del precio de 
+cierre \cite{atkins2018financial}. Esto muestra la utilidad de este clasificador 
+en el contexto de noticias financieras.
+
+Este trabajo busca determinar si la información contenida en los 
+titulares de noticias financieras, junto con las variables contextuales 
+disponibles, permiten discriminar entre noticias de 
+\textit{Impacto Alto} y noticias de \textit{Impacto Medio/Bajo}. 
+Se propone como hipótesis que la distribución de determinadas 
+palabras en los titulares, junto con las características financieras disponibles 
+contiene información suficiente para identificar noticias pertenecientes a la categoría de
+impacto, ya sea alto o medio/bajo.
+
+El objetivo de este estudio es desarrollar y evaluar un 
+clasificador Naïve Bayes capaz de estimar la categoría de impacto de una 
+noticia financiera a partir de la información contenida en su titular y de 
+variables seleccionadas. Para ello, los titulares se procesan 
+mediante técnicas de Procesamiento del Lenguaje Natural (NLP) que incluyen 
+tokenización, eliminación de palabras de uso común y construcción de una matriz 
+dispersa de frecuencias de términos. Sobre esta representación se entrena un modelo 
+de clasificación y se mide su desempeño mediante \textit{accuracy}, precisión, \textit{recall}, 
+F1-score y matriz de confusión.
+
 
 \section{Metodología}
 
@@ -47,11 +107,12 @@ GBN para encontrar las relaciones de dependencia probabilística entre los bioma
 
 
 \subsection{Herramientas}
-Todos los análisis probabilisticos se realizaron utilizando entorno de desarrollo 
+La realización y evaluación del modelo se realizaron utilizando entorno de desarrollo 
 integrado \texttt{RStudio} (v2026.08.2), utilizando el lenguaje de programación 
 estadístico \texttt{R} (v4.5.3) \cite{R} mediante el sistema de código abierto 
-Quarto (v1.8.25), utilizando los paquetes \texttt{bnlearn} (v5.2.1)\cite{Bnlearn} 
-y \texttt{tidyverse} (v2.0.0).
+Quarto (v1.8.25), utilizando los paquetes \texttt{bnlearn} (v5.2.1)\cite{Bnlearn}, 
+\texttt{tidyverse} (v2.0.0),  \texttt{tidytext} (v0.4.3),  \texttt{stringr} (v1.6.0),  
+\texttt{ggplot2} (v4.0.3) y \texttt{dplyr} (v1.2.1).
 
 \subsection{Preprocesamiento}
 

@@ -19,6 +19,275 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global/global}
+    \entry{tetlock2007media}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=0606b6df65162b9d9b57d31671825a8d}{%
+           family={Tetlock},
+           familyi={T\bibinitperiod},
+           given={Paul\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{fullhash}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{fullhashraw}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{bibnamehash}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{authorbibnamehash}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{authornamehash}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{authorfullhash}{0606b6df65162b9d9b57d31671825a8d}
+      \strng{authorfullhashraw}{0606b6df65162b9d9b57d31671825a8d}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Finance}
+      \field{number}{3}
+      \field{title}{Giving Content to Investor Sentiment: The Role of Media in the Stock Market}
+      \field{volume}{62}
+      \field{year}{2007}
+      \field{pages}{1139\bibrangedash 1168}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1111/j.1540-6261.2007.01232.x
+      \endverb
+    \endentry
+    \entry{tetlock2008more}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=0606b6df65162b9d9b57d31671825a8d}{%
+           family={Tetlock},
+           familyi={T\bibinitperiod},
+           given={Paul\bibnamedelima C.},
+           giveni={P\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=c8d3795e2f790e26a58220f89db9371a}{%
+           family={Saar-Tsechansky},
+           familyi={S\bibinithyphendelim T\bibinitperiod},
+           given={Maytal},
+           giveni={M\bibinitperiod}}}%
+        {{hash=4be2ffd1242472b4b91610680460f71d}{%
+           family={Macskassy},
+           familyi={M\bibinitperiod},
+           given={Sofus},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{099df455c91e72c2c8d67cab08fea1d1}
+      \strng{fullhash}{d4b1dfc0f7adeba6d3f33029dbc99bd9}
+      \strng{fullhashraw}{d4b1dfc0f7adeba6d3f33029dbc99bd9}
+      \strng{bibnamehash}{d4b1dfc0f7adeba6d3f33029dbc99bd9}
+      \strng{authorbibnamehash}{d4b1dfc0f7adeba6d3f33029dbc99bd9}
+      \strng{authornamehash}{099df455c91e72c2c8d67cab08fea1d1}
+      \strng{authorfullhash}{d4b1dfc0f7adeba6d3f33029dbc99bd9}
+      \strng{authorfullhashraw}{d4b1dfc0f7adeba6d3f33029dbc99bd9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Finance}
+      \field{number}{3}
+      \field{title}{More Than Words: Quantifying Language to Measure Firms' Fundamentals}
+      \field{volume}{63}
+      \field{year}{2008}
+      \field{pages}{1437\bibrangedash 1467}
+      \range{pages}{31}
+      \verb{doi}
+      \verb 10.1111/j.1540-6261.2008.01362.x
+      \endverb
+    \endentry
+    \entry{heston2017news}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=da886e16f39671df2e1cc9208589b67d}{%
+           family={Heston},
+           familyi={H\bibinitperiod},
+           given={Steven\bibnamedelima L.},
+           giveni={S\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=b5f053d580b6f93adbe0576617d25d58}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Nitish\bibnamedelima R.},
+           giveni={N\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{fullhash}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{fullhashraw}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{bibnamehash}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{authorbibnamehash}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{authornamehash}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{authorfullhash}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \strng{authorfullhashraw}{298eee04b7a3fd12eb00263ecc32fe9b}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Financial Analysts Journal}
+      \field{number}{3}
+      \field{title}{News vs. Sentiment: Predicting Stock Returns from News Stories}
+      \field{volume}{73}
+      \field{year}{2017}
+      \field{pages}{67\bibrangedash 83}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.2469/faj.v73.n3.3
+      \endverb
+    \endentry
+    \entry{malo2014good}{article}{}{}
+      \name{author}{5}{}{%
+        {{hash=8bafe15c788d2e611aec6337d49a3385}{%
+           family={Malo},
+           familyi={M\bibinitperiod},
+           given={Pekka},
+           giveni={P\bibinitperiod}}}%
+        {{hash=668efb83666c0ef5971bdff6e2f8b5c0}{%
+           family={Sinha},
+           familyi={S\bibinitperiod},
+           given={Ankur},
+           giveni={A\bibinitperiod}}}%
+        {{hash=470627ee91b4bea61df92c8e1c42d5f3}{%
+           family={Korhonen},
+           familyi={K\bibinitperiod},
+           given={Pekka},
+           giveni={P\bibinitperiod}}}%
+        {{hash=30332f7b9085378d760e6dcdbd133f99}{%
+           family={Wallenius},
+           familyi={W\bibinitperiod},
+           given={Jyrki},
+           giveni={J\bibinitperiod}}}%
+        {{hash=16dfdbc6d160748a13e8b553e2644871}{%
+           family={Takala},
+           familyi={T\bibinitperiod},
+           given={Pyry},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c39ad48cb418dfaa07a1ad5d261c926}
+      \strng{fullhash}{3efa3cb5690cc40ebb8313ec946e0a22}
+      \strng{fullhashraw}{3efa3cb5690cc40ebb8313ec946e0a22}
+      \strng{bibnamehash}{3efa3cb5690cc40ebb8313ec946e0a22}
+      \strng{authorbibnamehash}{3efa3cb5690cc40ebb8313ec946e0a22}
+      \strng{authornamehash}{6c39ad48cb418dfaa07a1ad5d261c926}
+      \strng{authorfullhash}{3efa3cb5690cc40ebb8313ec946e0a22}
+      \strng{authorfullhashraw}{3efa3cb5690cc40ebb8313ec946e0a22}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of the Association for Information Science and Technology}
+      \field{number}{4}
+      \field{title}{Good Debt or Bad Debt: Detecting Semantic Orientations in Economic Texts}
+      \field{volume}{65}
+      \field{year}{2014}
+      \field{pages}{782\bibrangedash 796}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1002/asi.23062
+      \endverb
+    \endentry
+    \entry{kavlakoglu_naivebayes}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0b0ee043c5d5ce373995f25c08671606}{%
+           family={Kavlakoglu},
+           familyi={K\bibinitperiod},
+           given={Eda},
+           giveni={E\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IBM}%
+      }
+      \strng{namehash}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{fullhash}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{fullhashraw}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{bibnamehash}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{authorbibnamehash}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{authornamehash}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{authorfullhash}{0b0ee043c5d5ce373995f25c08671606}
+      \strng{authorfullhashraw}{0b0ee043c5d5ce373995f25c08671606}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{¿Qué son los clasificadores Naïve Bayes?}
+      \field{urlday}{13}
+      \field{urlmonth}{9}
+      \field{urlyear}{2026}
+      \field{urldateera}{ce}
+      \verb{urlraw}
+      \verb https://www.ibm.com/mx-es/think/topics/naive-bayes
+      \endverb
+      \verb{url}
+      \verb https://www.ibm.com/mx-es/think/topics/naive-bayes
+      \endverb
+    \endentry
+    \entry{mccallum1998comparison}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=17d73a3a5be48993791cbe4db8855331}{%
+           family={McCallum},
+           familyi={M\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod}}}%
+        {{hash=b69fc1ad440b0bf65dce845ca65e44a2}{%
+           family={Nigam},
+           familyi={N\bibinitperiod},
+           given={Kamal},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AAAI Press}%
+      }
+      \strng{namehash}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{fullhash}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{fullhashraw}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{bibnamehash}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{authorbibnamehash}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{authornamehash}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{authorfullhash}{9a2f1094aec23d912c635dc84bd186d0}
+      \strng{authorfullhashraw}{9a2f1094aec23d912c635dc84bd186d0}
+      \field{sortinit}{6}
+      \field{sortinithash}{b33bc299efb3c36abec520a4c896a66d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the AAAI-98 Workshop on Learning for Text Categorization}
+      \field{title}{A Comparison of Event Models for Naive Bayes Text Classification}
+      \field{year}{1998}
+      \field{pages}{41\bibrangedash 48}
+      \range{pages}{8}
+    \endentry
+    \entry{atkins2018financial}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=866afd7a5e6a73f5daf53f886f49d6ef}{%
+           family={Atkins},
+           familyi={A\bibinitperiod},
+           given={Adam},
+           giveni={A\bibinitperiod}}}%
+        {{hash=72e0fc84e0c9581e8d1a97970aad5462}{%
+           family={Niranjan},
+           familyi={N\bibinitperiod},
+           given={Mahesan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bcb63f6f46237701971219ecfd502b3d}{%
+           family={Gerding},
+           familyi={G\bibinitperiod},
+           given={Enrico},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb64cb44f76ec443578ea7b467833bca}
+      \strng{fullhash}{a366b0ca3a2cc00a7e1834c8d0edff64}
+      \strng{fullhashraw}{a366b0ca3a2cc00a7e1834c8d0edff64}
+      \strng{bibnamehash}{a366b0ca3a2cc00a7e1834c8d0edff64}
+      \strng{authorbibnamehash}{a366b0ca3a2cc00a7e1834c8d0edff64}
+      \strng{authornamehash}{bb64cb44f76ec443578ea7b467833bca}
+      \strng{authorfullhash}{a366b0ca3a2cc00a7e1834c8d0edff64}
+      \strng{authorfullhashraw}{a366b0ca3a2cc00a7e1834c8d0edff64}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Journal of Finance and Data Science}
+      \field{number}{2}
+      \field{title}{Financial News Predicts Stock Market Volatility Better Than Close Price}
+      \field{volume}{4}
+      \field{year}{2018}
+      \field{pages}{120\bibrangedash 137}
+      \range{pages}{18}
+      \verb{doi}
+      \verb 10.1016/j.jfds.2018.02.002
+      \endverb
+    \endentry
     \entry{R}{manual}{}{}
       \name{author}{1}{}{%
         {{hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
@@ -39,8 +308,8 @@
       \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
       \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
       \strng{authorfullhashraw}{dcdebb6b35bff7c0568bf8c50ef8626d}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{R: A Language and Environment for Statistical Computing}
@@ -80,8 +349,8 @@
       \strng{authornamehash}{23bd3bda4e647feb93d8058cd957bbf6}
       \strng{authorfullhash}{23bd3bda4e647feb93d8058cd957bbf6}
       \strng{authorfullhashraw}{23bd3bda4e647feb93d8058cd957bbf6}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{edition}{2nd}

@@ -2378,8 +2378,15 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1" intorder="1">R</bcf:citekey>
-    <bcf:citekey order="2" intorder="1">Bnlearn</bcf:citekey>
+    <bcf:citekey order="1" intorder="1">tetlock2007media</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">tetlock2008more</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">heston2017news</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">malo2014good</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">kavlakoglu_naivebayes</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">mccallum1998comparison</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">atkins2018financial</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">R</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Bnlearn</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

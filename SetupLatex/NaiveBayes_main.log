@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.5)  13 SEP 2026 13:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.5)  13 SEP 2026 18:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1275,10 +1275,10 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
  (NaiveBayes_main.aux (abstract.aux)
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 18.
+(babel)             Reported on input line 28.
 )
 \openout1 = `NaiveBayes_main.aux'.
 
@@ -1427,39 +1427,36 @@ Package babel Info: Main language set to 'spanish'.
 <simbolo-tec-blue.png, id=58, 1606.0pt x 1606.0pt>
 File: simbolo-tec-blue.png Graphic file (type png)
 <use simbolo-tec-blue.png>
-Package pdftex.def Info: simbolo-tec-blue.png  used on input line 33.
+Package pdftex.def Info: simbolo-tec-blue.png  used on input line 32.
 (pdftex.def)             Requested size: 81.5309pt x 81.52998pt.
 <TEC.png, id=60, 860.46469pt x 316.93407pt>
 File: TEC.png Graphic file (type png)
 <use TEC.png>
-Package pdftex.def Info: TEC.png  used on input line 33.
+Package pdftex.def Info: TEC.png  used on input line 32.
 (pdftex.def)             Requested size: 81.5309pt x 30.02682pt.
  (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 32.
  (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 33.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 32.
  (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 33.
+LaTeX Font Info:    Trying to load font information for U+rsfs on input line 32.
  (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/jknappen\ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-LaTeX Font Info:    Trying to load font information for T3+cmss on input line 33.
+LaTeX Font Info:    Trying to load font information for T3+cmss on input line 32.
  (C:\Users\DIEGO\AppData\Local\Programs\MiKTeX\tex/latex/tipa\t3cmss.fd
 File: t3cmss.fd 2001/12/31 TIPA font definitions
-)
-LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
-(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 81.
- [1
+) [1
 
 {C:/Users/DIEGO/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
@@ -1468,11 +1465,14 @@ LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
  <./simbolo-tec-blue.png
 
 pdfTeX warning: pdflatex (file ./simbolo-tec-blue.png): large interlaced PNG might cause out of memory (use non-interlaced PNG to fix this)
-> <./TEC.png>] [2] 
+> <./TEC.png>]
+LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 83.
+ [2] [3] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (NaiveBayes_main.aux (abstract.aux)
-LaTeX Info: Redefining \. on input line 18.
-LaTeX Info: Redefining \% on input line 18.
+LaTeX Info: Redefining \. on input line 28.
+LaTeX Info: Redefining \% on input line 28.
 )
  ***********
 LaTeX2e <2026-06-01>
@@ -1485,17 +1485,17 @@ Package logreq Info: Writing requests to 'NaiveBayes_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46504 strings out of 467441
- 921480 string characters out of 5407592
- 2027101 words of memory out of 5000000
- 74947 multiletter control sequences out of 15000+600000
- 647690 words of font info for 148 fonts, out of 8000000 for 9000
+ 46575 strings out of 467441
+ 923148 string characters out of 5407592
+ 2029598 words of memory out of 5000000
+ 74974 multiletter control sequences out of 15000+600000
+ 648876 words of font info for 166 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,12n,131p,1069b,2235s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,12n,131p,1069b,2241s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on NaiveBayes_main.pdf (2 pages, 243888 bytes).
+Output written on NaiveBayes_main.pdf (3 pages, 258870 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
- 18 named destinations out of 1000 (max. 500000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 26 named destinations out of 1000 (max. 500000)
  48255 words of extra memory for PDF output out of 51595 (max. 10000000)
 
