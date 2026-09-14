@@ -104,6 +104,9 @@ Se empleó un enfoque cuantitativo, correlacional, no experimental, basado en el
 GBN para encontrar las relaciones de dependencia probabilística entre los biomarcadores.
 
 \subsection{Fuente de datos}
+Los datos fueron proporcionados por una base de datos que contiene informacion sobre titulares de noticias
+financieras entre febrero y agosto de 2025. La base de datos fue proporiconada por nuestro profesor de el
+Instituto Tecnologico de Estudios Superiores Monterrey
 
 
 \subsection{Herramientas}
@@ -115,12 +118,22 @@ Quarto (v1.8.25), utilizando los paquetes \texttt{bnlearn} (v5.2.1)\cite{Bnlearn
 \texttt{ggplot2} (v4.0.3) y \texttt{dplyr} (v1.2.1).
 
 \subsection{Preprocesamiento}
+Se exploro la distribucion de nuestra variable objetivo (el nivel de impacto) para poder facilitarnos el modelado
+inicial o para evitar desbalances severos. Simplificamos el prblema recodificando la variable objetivo a dos categoricas 
+(impacto alto e imapcto bajo). Se uilizo la funcion \texttt{unnes_tokens()} para descomponer los tiulares de noticias en
+palabras individuales, se removieron las palabras comunes en ingles utilizando el dataset stop words.
 
 
 \subsection{Construcción y selección del modelo global}
+Construimos la matriz de frecuencias de palabras donde cada renglón represente un titular y las columnas
+correspondan al vocabulario retenido. Dividimos la matriz de datos en training y test set, despues se
+entrenó un clasificador Naïve Bayes multinomial, utilizando el training set, para estimar la probabilidad
+de pertenencia de cada titular a la categoría de Impacto Alto o Impacto Medio/Bajo.
 
 
 \subsection{Estrategia analítica para consultas probabilísticas}
+Hicimos pruebas utilizando el conjunto de prueba, calculamos el accuracy, precision, recall, 
+F1-score y matriz de confusión para poder identifiar los patrones de acierot y error del modelo.
 
 
 \section{Aplicación}
