@@ -145,7 +145,20 @@ F1-score y matriz de confusión para poder identifiar los patrones de acierot y 
 
 
 \section{Conclusiones}
+El clasificador Naïve Bayes multinomial entrenado con obtuvo un desempeño algo débil con una accuracy de 57.87\%,
+que quedó por debajo de la tasa de no informacion de 68.06\%, o sea que, la que se obtiene con solo predecir siempre
+la clase mayoritaria. El Kappa de 0.0457 nos reafirma que el modelo no concuerda mucho con la realidad osea que
+es casi igual a hacerlo al azar, y la exactitud balanceada de 52.32\% refuerza esta conclusion.
 
+Para la clase de interes (Impacto Alto) el modelo mostro una sensibilidad de 36.96\%, con una precision de 34.9\% y
+un F1 de 35.9\%. De 292 titulares clasificados como Impacto Alto, solo 102 lo eran en realidad y se dejaron pasar 174
+casos reales de Impacto Alto.
+
+Esto muestra que la idea de tratar cada palabra como si no tuviera relación con las demas, junto con solo fijarse en
+si una palabra aparece o no (sin importar cuántas veces se repite), no le da al modelo suficiente informacion para 
+distinguir entre las dos categorias de impacto. En resumen el Naïve Bayes no logro hacerlo mejor que si simplemente
+se eligiera siempre la categoria mas comun, asi que la forma en que se representaron las palabras no fue suficiente para
+esta ocasion.
 
 %TC:ignore
 %\clearpage %add new page for references
