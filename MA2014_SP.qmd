@@ -13,6 +13,7 @@ editor: source
 install.packages("tidytext")
 install.packages("stringr")
 install.packages("naivebayes")
+install.packages('caret')
 ```
 
 
