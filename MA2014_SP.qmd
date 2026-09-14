@@ -139,6 +139,23 @@ modelo= naive_bayes(Impact_Level ~ ., data = train, laplace = 1)
 modelo
 ```
 ### Reporten la accuracy, precision, recall, F1-score y matriz de confusión. Redacten la interpretación de estas métricas en el contexto financiero: ¿Qué implicaciones tiene para una o un inversionista un falso positivo (predecir impacto alto cuando no lo hay) frente a un falso negativo?
+```{r}
+library(caret)
+
+pred = predict(modelo, newdata = test %>% select(-Impact_Level))
+
+cm = confusionMatrix(data = pred, reference = test$Impact_Level, positive = "Impacto Alto")
+cm
+
+```
+```{r}
+metricas = tibble(
+  Metrica = c("Accuracy", "Precision", "Recall", "F1"),
+  Valor = c(cm$overall["Accuracy"], cm$byClass["Precision"],
+            cm$byClass["Recall"], cm$byClass["F1"])
+)
+metricas
+```
 
 ### Redacten un artículo científico que incluya un abstract, introducción, descripción de los métodos que utilizaron, aplicación de los métodos al problema en cuestión, conclusiones y referencias.
 
