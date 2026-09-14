@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber NaiveBayes_main"] 1789344260.90535 "NaiveBayes_main.bcf" "NaiveBayes_main.bbl" "NaiveBayes_main" 1789345830.67938 0
-  "NaiveBayes_main.bcf" 1789345830 108688 d4fcf4076455f97449cbd4fffe8603fc "pdflatex"
-  "references.bib" 1789344255 4614 5d6028b12a136ba12a0c8d4692a89d06 ""
+["biber NaiveBayes_main"] 1789363470.5561 "NaiveBayes_main.bcf" "NaiveBayes_main.bbl" "NaiveBayes_main" 1789364930.97884 0
+  "NaiveBayes_main.bcf" 1789364930 109047 6d7169688cc20a6bc9d83f0b5f357f98 "pdflatex"
+  "references.bib" 1789362425 4888 2cf4838e657c12af58176c282ee606b9 ""
   (generated)
   "NaiveBayes_main.bbl"
   "NaiveBayes_main.blg"
   (rewritten before read)
-["pdflatex"] 1789345828.06547 "c:/Users/DIEGO/DOCS_Latex/Articulo_Naive_Bayes/NaiveBayes_main.tex" "NaiveBayes_main.pdf" "NaiveBayes_main" 1789345830.68015 0
+["pdflatex"] 1789364928.29679 "c:/Users/DIEGO/DOCS_Latex/Articulo_Naive_Bayes/NaiveBayes_main.tex" "NaiveBayes_main.pdf" "NaiveBayes_main" 1789364930.97959 0
   "Academic.cls" 1788739550 9232 3548be7d72d4d8924b11c66b541ed96f ""
   "C:/Users/DIEGO/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1788750103 80937 91001db6d4ae332437b4b739862cda02 ""
   "C:/Users/DIEGO/AppData/Local/MiKTeX/fonts/tfm/public/rsfs/rsfs10.tfm" 1788654126 688 37338d6ab346c2f1466b29e195316aa4 ""
@@ -286,16 +286,16 @@
   "C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
   "C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/tex/latex/xfrac/xfrac.sty" 1718270407 14945 a207ee7fd6b8cf6d82afb367c583ddd3 ""
   "C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty" 1656236919 4937 4ce600ce9bd4ec84d0250eb6892fcf4f ""
-  "NaiveBayes_main.aux" 1789345830 3585 85b11d1d830fb11ee6056fbd843591ab "pdflatex"
-  "NaiveBayes_main.bbl" 1789344262 14727 1e494116ba377d5865dfa951040df38c "biber NaiveBayes_main"
-  "NaiveBayes_main.out" 1789345830 1931 50086f975caddadd67a9bcf6de4df936 "pdflatex"
-  "NaiveBayes_main.pre" 1789345829 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "NaiveBayes_main.run.xml" 1789345830 2517 515b8058cd304fca0cabdfc9551bf674 "pdflatex"
-  "NaiveBayes_main.tex" 1789345827 6450 8b5bcb12bb83b0c3ad0bc84ce062afb9 ""
+  "NaiveBayes_main.aux" 1789364930 4601 ed3a0af639949f3aa254834978d77c13 "pdflatex"
+  "NaiveBayes_main.bbl" 1789363472 14611 b2b47589100506490a0bd29e26eaff21 "biber NaiveBayes_main"
+  "NaiveBayes_main.out" 1789364930 1783 b66930b268c19bcc005a98fdfb0418b1 "pdflatex"
+  "NaiveBayes_main.pre" 1789364929 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "NaiveBayes_main.run.xml" 1789364930 2517 515b8058cd304fca0cabdfc9551bf674 "pdflatex"
+  "NaiveBayes_main.tex" 1789364924 16861 c0b9274aac603f0a446e83194a37ecdf ""
   "TEC.png" 1788654247 57689 63944758117cae0a965eef8cd6433720 ""
-  "abstract.aux" 1789345829 4744 743e92e53e81a7d6b84b87f8ec2b151a "pdflatex"
-  "abstract.tex" 1789328668 51 b67f9eef77795367d5e98fb73603abca ""
-  "c:/Users/DIEGO/DOCS_Latex/Articulo_Naive_Bayes/NaiveBayes_main.tex" 1789345827 6450 8b5bcb12bb83b0c3ad0bc84ce062afb9 ""
+  "abstract.aux" 1789364930 4744 743e92e53e81a7d6b84b87f8ec2b151a "pdflatex"
+  "abstract.tex" 1789363744 813 5c8e2b2b1280592ba5fea94e1c877eb2 ""
+  "c:/Users/DIEGO/DOCS_Latex/Articulo_Naive_Bayes/NaiveBayes_main.tex" 1789364924 16861 c0b9274aac603f0a446e83194a37ecdf ""
   "simbolo-tec-blue.png" 1764022575 235655 c68b71e6c38bf96295731551cc9ae89d ""
   (generated)
   "NaiveBayes_main.aux"

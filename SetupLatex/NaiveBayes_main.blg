@@ -1,14 +1,16 @@
 [0] Config.pm:329> INFO - This is Biber 2.22
 [0] Config.pm:332> INFO - Logfile is 'NaiveBayes_main.blg'
-[92] biber-MSWIN64:342> INFO - === 
-[121] Biber.pm:421> INFO - Reading 'NaiveBayes_main.bcf'
-[202] Biber.pm:1002> INFO - Found 9 citekeys in bib section 0
-[213] Biber.pm:4487> INFO - Processing section 0
-[221] Biber.pm:4680> INFO - Looking for bibtex file 'references.bib' for section 0
-[264] bibtex.pm:1713> INFO - LaTeX decoding ...
-[282] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
-[345] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[346] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
-[346] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
-[356] bbl.pm:676> INFO - Writing 'NaiveBayes_main.bbl' with encoding 'UTF-8'
-[360] bbl.pm:779> INFO - Output to NaiveBayes_main.bbl
+[106] biber-MSWIN64:342> INFO - === 
+[139] Biber.pm:421> INFO - Reading 'NaiveBayes_main.bcf'
+[232] Biber.pm:1002> INFO - Found 9 citekeys in bib section 0
+[245] Biber.pm:4487> INFO - Processing section 0
+[255] Biber.pm:4680> INFO - Looking for bibtex file 'references.bib' for section 0
+[296] bibtex.pm:1713> INFO - LaTeX decoding ...
+[311] bibtex.pm:1519> INFO - Found BibTeX data source 'references.bib'
+[370] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'variable = shifted' with 'variable = non-ignorable'
+[370] UCollate.pm:68> INFO - Overriding locale 'es-ES' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[371] Biber.pm:4307> INFO - Sorting list 'none/global//global/global/global' of type 'entry' with template 'none' and locale 'es-ES'
+[379] bbl.pm:676> INFO - Writing 'NaiveBayes_main.bbl' with encoding 'UTF-8'
+[383] bbl.pm:779> INFO - Output to NaiveBayes_main.bbl
+[384] Biber.pm:132> WARN - legacy month field 'Aug' in entry 'CN_2022' is not an integer - this will probably not sort properly.
+[384] Biber.pm:134> INFO - WARNINGS: 1

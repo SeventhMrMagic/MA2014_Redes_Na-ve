@@ -288,6 +288,37 @@
       \verb 10.1016/j.jfds.2018.02.002
       \endverb
     \endentry
+    \entry{CN_2022}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=9979901827dbc90d94689de4abf96570}{%
+           family={CN},
+           familyi={C\bibinitperiod},
+           given={Prajwal},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{9979901827dbc90d94689de4abf96570}
+      \strng{fullhash}{9979901827dbc90d94689de4abf96570}
+      \strng{fullhashraw}{9979901827dbc90d94689de4abf96570}
+      \strng{bibnamehash}{9979901827dbc90d94689de4abf96570}
+      \strng{authorbibnamehash}{9979901827dbc90d94689de4abf96570}
+      \strng{authornamehash}{9979901827dbc90d94689de4abf96570}
+      \strng{authorfullhash}{9979901827dbc90d94689de4abf96570}
+      \strng{authorfullhashraw}{9979901827dbc90d94689de4abf96570}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{DigitalOcean}
+      \field{month}{8}
+      \field{title}{Confusion matrix in R: A complete guide}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.digitalocean.com/community/tutorials/confusion-matrix-in-r
+      \endverb
+      \verb{url}
+      \verb https://www.digitalocean.com/community/tutorials/confusion-matrix-in-r
+      \endverb
+    \endentry
     \entry{R}{manual}{}{}
       \name{author}{1}{}{%
         {{hash=dcdebb6b35bff7c0568bf8c50ef8626d}{%
@@ -308,8 +339,8 @@
       \strng{authornamehash}{dcdebb6b35bff7c0568bf8c50ef8626d}
       \strng{authorfullhash}{dcdebb6b35bff7c0568bf8c50ef8626d}
       \strng{authorfullhashraw}{dcdebb6b35bff7c0568bf8c50ef8626d}
-      \field{sortinit}{8}
-      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{R: A Language and Environment for Statistical Computing}
@@ -320,43 +351,6 @@
       \verb{url}
       \verb https://www.R-project.org/
       \endverb
-    \endentry
-    \entry{Bnlearn}{book}{}{}
-      \name{author}{2}{}{%
-        {{hash=b972290748083aebb53dafb73bcafd30}{%
-           family={Scutari},
-           familyi={S\bibinitperiod},
-           given={Marco},
-           giveni={M\bibinitperiod}}}%
-        {{hash=319bca9929053bfa981acb4e1e0096bd}{%
-           family={Denis},
-           familyi={D\bibinitperiod},
-           given={Jean-Baptiste},
-           giveni={J\bibinithyphendelim B\bibinitperiod}}}%
-      }
-      \list{location}{1}{%
-        {Boca Raton}%
-      }
-      \list{publisher}{2}{%
-        {Chapman}%
-        {Hall}%
-      }
-      \strng{namehash}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{fullhash}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{fullhashraw}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{bibnamehash}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{authorbibnamehash}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{authornamehash}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{authorfullhash}{23bd3bda4e647feb93d8058cd957bbf6}
-      \strng{authorfullhashraw}{23bd3bda4e647feb93d8058cd957bbf6}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{edition}{2nd}
-      \field{note}{ISBN 978-0367366513}
-      \field{title}{Bayesian Networks with Examples in {R}}
-      \field{year}{2021}
     \endentry
   \enddatalist
 \endrefsection

@@ -26,7 +26,7 @@
 
 \renewcommand{\ShortAuthors}{Cordero Rivera et al.}
 
-\renewcommand{\Keywords}{}
+\renewcommand{\Keywords}{noticias financieras, procesamiento de lenguaje natural, Naïve Bayes, clasificación de texto, impacto de mercado}
 \maketitle
 %\vspace{-1.9em}\noindent\rule{\textwidth}{1pt} %add this line if not using abstract
 \onehalfspacing
@@ -92,7 +92,7 @@ noticia financiera a partir de la información contenida en su titular y de
 variables seleccionadas. Para ello, los titulares se procesan 
 mediante técnicas de Procesamiento del Lenguaje Natural (NLP) que incluyen 
 tokenización, eliminación de palabras de uso común y construcción de una matriz 
-dispersa de frecuencias de términos. Sobre esta representación se entrena un modelo 
+dispersa de frecuencias de términos \cite{CN_2022}. Sobre esta representación se entrena un modelo 
 de clasificación y se mide su desempeño mediante \textit{accuracy}, precisión, \textit{recall}, 
 F1-score y matriz de confusión.
 
@@ -100,8 +100,9 @@ F1-score y matriz de confusión.
 \section{Metodología}
 
 \subsection{Enfoque y tipo de estudio}
-Se empleó un enfoque cuantitativo, correlacional, no experimental, basado en el uso de 
-GBN para encontrar las relaciones de dependencia probabilística entre los biomarcadores.
+Se empleó un enfoque cuantitativo, no experimental y predictivo, basado en técnicas de 
+procesamiento de lenguaje natural y aprendizaje supervisado para clasificar el nivel 
+de impacto de noticias financieras.
 
 \subsection{Fuente de datos}
 Los datos fueron proporcionados por una base de datos que contiene informacion sobre titulares de noticias
@@ -113,38 +114,162 @@ Instituto Tecnologico de Estudios Superiores Monterrey
 La realización y evaluación del modelo se realizaron utilizando entorno de desarrollo 
 integrado \texttt{RStudio} (v2026.08.2), utilizando el lenguaje de programación 
 estadístico \texttt{R} (v4.5.3) \cite{R} mediante el sistema de código abierto 
-Quarto (v1.8.25), utilizando los paquetes \texttt{bnlearn} (v5.2.1)\cite{Bnlearn}, 
+Quarto (v1.8.25), utilizando los paquetes \texttt{naivebayes} (v1.0.0), 
 \texttt{tidyverse} (v2.0.0),  \texttt{tidytext} (v0.4.3),  \texttt{stringr} (v1.6.0),  
 \texttt{ggplot2} (v4.0.3) y \texttt{dplyr} (v1.2.1).
 
 \subsection{Preprocesamiento}
-Se exploro la distribucion de nuestra variable objetivo (el nivel de impacto) para poder facilitarnos el modelado
-inicial o para evitar desbalances severos. Simplificamos el prblema recodificando la variable objetivo a dos categoricas 
-(impacto alto e imapcto bajo). Se uilizo la funcion \texttt{unnes_tokens()} para descomponer los tiulares de noticias en
-palabras individuales, se removieron las palabras comunes en ingles utilizando el dataset stop words.
+Se exploró la distribución de nuestra variable objetivo (el nivel de impacto) para poder facilitarnos el modelado
+inicial o para evitar desbalances severos. Simplificamos el prblema recodificando la variable objetivo a dos categóricas 
+(impacto alto e imapcto medio/bajo). Se utilizó la función \texttt{unnest\_tokens()} para descomponer 
+los tiulares de noticias en palabras individuales y se removieron las palabras comunes en inglés utilizando 
+el dataset \texttt{stop\_words}.
 
 
-\subsection{Construcción y selección del modelo global}
+
+\subsection{Construcción del modelo}
 Construimos la matriz de frecuencias de palabras donde cada renglón represente un titular y las columnas
-correspondan al vocabulario retenido. Dividimos la matriz de datos en training y test set, despues se
-entrenó un clasificador Naïve Bayes multinomial, utilizando el training set, para estimar la probabilidad
-de pertenencia de cada titular a la categoría de Impacto Alto o Impacto Medio/Bajo.
+correspondan al vocabulario retenido. Dividimos la matriz de datos en training y test set, despues se entrenó 
+un clasificador Naïve Bayes empleando variables Bernoulli para representar la presencia o ausencia de 
+términos, distribuciones categóricas para sentimiento y sector, y distribuciones gaussianas para las variables 
+continuas. El modelo Naïve Bayes fue ajustado empleando suavizado de Laplace con un parámetro igual a 1.
 
 
-\subsection{Estrategia analítica para consultas probabilísticas}
+\subsection{Implementación de las métricas de desempeño}
 Hicimos pruebas utilizando el conjunto de prueba, calculamos el accuracy, precision, recall, 
 F1-score y matriz de confusión para poder identifiar los patrones de acierot y error del modelo.
+El conjunto final fue dividido de manera estratificada utilizando 70\% de las observaciones para entrenamiento 
+y 30\% para prueba, fijando una semilla para garantizar la reproducibilidad. La evaluación se 
+realizó sobre 864 observaciones del conjunto de prueba, considerando como clase 
+positiva a \textit{Impacto Alto}.
 
 
 \section{Aplicación}
 
 \subsection{Resultados}
 
+Después del preprocesamiento de los titulares se obtuvo una matriz dispersa formada por 2,876 noticias y un vocabulario 
+de 238 términos, con un total de 18,248 apariciones de palabras. El conjunto de entrenamiento conservó una distribución de 31.91\% de noticias clasificadas como \textit{Impacto Alto} y 68.09\% como 
+\textit{Impacto Medio/Bajo}. Esta distribución fue prácticamente equivalente en el conjunto de prueba, 
+donde la prevalencia de noticias de alto impacto fue de 31.94\%. La matriz de confusión obtenida 
+se presenta en la Tabla~\ref{tab:confusion}.
 
-\subsection{Discuciones}
+\begin{table}[htbp]
+\centering
+\caption{Matriz de confusión del clasificador Naïve Bayes en el conjunto de prueba.}
+\label{tab:confusion}
+
+\begin{tabular}{lcc}
+\hline
+& \multicolumn{2}{c}{\textbf{Clase real}} \\
+\textbf{Predicción} & \textbf{Impacto Alto} & \textbf{Impacto Medio/Bajo} \\
+\hline
+Impacto Alto       & 102 & 190 \\
+Impacto Medio/Bajo & 174 & 398 \\
+\hline
+\end{tabular}
+
+\end{table}
+
+De las 276 noticias realmente pertenecientes a la categoría de \textit{Impacto Alto}, el 
+modelo identificó correctamente 102, mientras que 174 fueron clasificadas erróneamente como \textit{Impacto Medio/Bajo}. Por otro lado, 
+de las 588 noticias pertenecientes a la categoría \textit{Impacto Medio/Bajo}, 398 fueron 
+correctamente identificadas y 190 fueron clasificadas como de alto impacto.
+
+Las principales métricas de desempeño se presentan en la Tabla~\ref{tab:metricas}. El modelo 
+obtuvo una \textit{accuracy} de 0.5787, equivalente a 57.87\%. La precisión para la clase 
+\textit{Impacto Alto} fue de 0.3493, lo que significa que aproximadamente 35 de cada 100 
+noticias clasificadas por el modelo como de alto impacto pertenecían realmente a dicha categoría. 
+El \textit{recall} fue de 0.3696. Finalmente, el F1-score alcanzó 
+un valor de 0.359.
+
+\begin{table}[htbp]
+\centering
+\caption{Métricas de desempeño del modelo sobre el conjunto de prueba.}
+\label{tab:metricas}
+
+\begin{tabular}{lc}
+\hline
+\textbf{Métrica} & \textbf{Valor} \\
+\hline
+Accuracy & 0.5787 \\
+Precision & 0.3493 \\
+Recall / Sensibilidad & 0.3696 \\
+F1-score & 0.3590 \\
+Especificidad & 0.6769 \\
+Balanced Accuracy & 0.5232 \\
+Kappa & 0.0457 \\
+\hline
+\end{tabular}
+
+\end{table}
+
+\subsection{Discusión}
+
+Los resultados obtenidos muestran que el clasificador Naïve Bayes fue capaz de construir una regla 
+probabilística de clasificación a partir de la información lingüística de los titulares y de las variables 
+financieras seleccionadas; sin embargo, su capacidad para distinguir adecuadamente entre noticias de 
+\textit{Impacto Alto} y \textit{Impacto Medio/Bajo} fue limitada.La categoría mayoritaria representa 68.06\% del 
+conjunto de prueba, por lo que una estrategia que clasificara todas las noticias como \textit{Impacto Medio/Bajo} 
+obtendría una exactitud superior a la del modelo propuesto.
+
+Este resultado sugiere que la hipótesis planteada sólo recibe apoyo limitado bajo la especificación 
+actual del modelo. Los titulares y las variables contienen cierta información que permite 
+diferenciar las clases, como sugiere una \textit{balanced accuracy} ligeramente superior a 0.5; sin embargo, 
+la señal extraída no fue suficiente para producir un clasificador con desempeño superior a la base de la 
+clase mayoritaria. Esto no implica necesariamente que los titulares carezcan de información relacionada con el 
+comportamiento financiero. Estudios previos han demostrado que el contenido lingüístico de las noticias se 
+relaciona con variables del mercado, incluyendo rendimientos, volumen de negociación y comportamiento posterior 
+de los activos \cite{tetlock2007media,tetlock2008more,heston2017news}. Más bien, los resultados sugieren que 
+transformar esta información en una clasificación binaria de nivel de impacto constituye una tarea distinta y 
+posiblemente más compleja.
+
+En este sentido, los resultados son consistentes con una de las principales dificultades señaladas 
+en la literatura sobre procesamiento de lenguaje financiero, donde se argumenta 
+que la orientación semántica de una expresión financiera no necesariamente puede obtenerse a partir de la 
+interpretación aislada de sus palabras.\cite{malo2014good} El enfoque utilizado en este estudio representa cada titular mediante 
+la presencia individual de términos y, por diseño, no conserva el orden de las palabras ni las relaciones 
+existentes entre ellas.
+
+El desempeño tampoco invalida la utilidad general de Naïve Bayes para clasificación de texto, ya que 
+se ha encontrado que este tipo de modelos puede presentar 
+resultados competitivos en problemas caracterizados por vocabularios amplios y representaciones dispersas \cite{mccallum1998comparison}. 
+No obstante, existen diferencias importantes con el presente trabajo. En particular, aunque inicialmente 
+se construyó una matriz de frecuencias, las características textuales fueron posteriormente binarizadas, 
+de modo que el modelo implementado utiliza la presencia o ausencia de cada término y no su frecuencia absoluta. 
+Esto aproxima el tratamiento del texto a un modelo Bernoulli..
+
+Esta distinción entre objetivos es relevante porque, dentro de los antecedentes considerados en este 
+trabajo, la mayoría de los estudios relacionan el lenguaje financiero con sentimiento, 
+rendimientos, precio o volatilidad, mientras que la clasificación directa de titulares en 
+categorías de \textit{Impacto Alto} e \textit{Impacto Medio/Bajo} representa una formulación menos 
+habitual. No se pretende establecer con ello que ésta sea la primera aplicación de este tipo, ya que 
+la revisión realizada no fue una revisión sistemática de toda la literatura disponible; sin embargo, 
+sí constituye una diferencia respecto de los principales antecedentes utilizados como referencia en este estudio.
+
+Desde una perspectiva financiera, la matriz de confusión permite además distinguir dos tipos de error 
+con implicaciones diferentes. Los 190 falsos positivos corresponden a noticias clasificadas como de alto 
+impacto que en realidad pertenecían a la categoría medio/bajo. Si el clasificador fuera utilizado como 
+herramienta de apoyo para una persona inversionista, estos errores podrían producir una reacción excesiva 
+ante información poco relevante, generar operaciones innecesarias, incrementar costos de transacción o 
+provocar modificaciones injustificadas del portafolio. Una cantidad elevada de falsos positivos también 
+podría disminuir la confianza en un sistema automático de alertas.
+
+Por otro lado, los 174 falsos negativos representan noticias realmente de alto impacto que el modelo 
+no logró identificar. En aplicaciones orientadas a vigilancia de riesgo, este error podría ser incluso 
+más relevante, ya que implicaría omitir acontecimientos potencialmente importantes y reducir la oportunidad 
+de ajustar posiciones, realizar coberturas o reaccionar ante cambios relevantes del mercado. Desde esta 
+perspectiva, el reducido \textit{recall} de 36.96\% constituye una de las principales limitaciones 
+prácticas del modelo. Si el objetivo prioritario fuera funcionar como sistema de alerta temprana, 
+sería razonable favorecer una mayor sensibilidad aun a costa de aceptar un incremento moderado 
+en falsos positivos.
+
+
+
 
 
 \section{Conclusiones}
+
 El clasificador Naïve Bayes multinomial entrenado con obtuvo un desempeño algo débil con una accuracy de 57.87\%,
 que quedó por debajo de la tasa de no informacion de 68.06\%, o sea que, la que se obtiene con solo predecir siempre
 la clase mayoritaria. El Kappa de 0.0457 nos reafirma que el modelo no concuerda mucho con la realidad osea que

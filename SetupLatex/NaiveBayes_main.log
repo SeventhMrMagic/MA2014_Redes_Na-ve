@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.5)  13 SEP 2026 18:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.9.5)  13 SEP 2026 23:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1275,10 +1275,10 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
  (NaiveBayes_main.aux (abstract.aux)
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 Package babel Info: 'spanish' activates 'spanish' shorthands.
-(babel)             Reported on input line 28.
+(babel)             Reported on input line 22.
 )
 \openout1 = `NaiveBayes_main.aux'.
 
@@ -1468,34 +1468,34 @@ pdfTeX warning: pdflatex (file ./simbolo-tec-blue.png): large interlaced PNG mig
 > <./TEC.png>]
 LaTeX Font Info:    Font shape `OT1/cmss/m/it' in size <12> not available
 (Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 83.
- [2] [3] 
+ [2] [3] [4] [5] [6] [7] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (NaiveBayes_main.aux (abstract.aux)
-LaTeX Info: Redefining \. on input line 28.
-LaTeX Info: Redefining \% on input line 28.
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
 )
  ***********
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-08-10>
  ***********
 Package rerunfilecheck Info: File `NaiveBayes_main.out' has not changed.
-(rerunfilecheck)             Checksum: 50086F975CADDADD67A9BCF6DE4DF936;1931.
+(rerunfilecheck)             Checksum: B66930B268C19BCC005A98FDFB0418B1;1783.
 Package logreq Info: Writing requests to 'NaiveBayes_main.run.xml'.
 \openout1 = `NaiveBayes_main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46575 strings out of 467441
- 923148 string characters out of 5407592
- 2029598 words of memory out of 5000000
- 74974 multiletter control sequences out of 15000+600000
- 648876 words of font info for 166 fonts, out of 8000000 for 9000
+ 46631 strings out of 467441
+ 923806 string characters out of 5407592
+ 2030793 words of memory out of 5000000
+ 74988 multiletter control sequences out of 15000+600000
+ 650230 words of font info for 184 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 117i,12n,131p,1069b,2241s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 117i,12n,131p,1069b,2290s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmssi12.pfb><C:/Users/DIEGO/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on NaiveBayes_main.pdf (3 pages, 258870 bytes).
+Output written on NaiveBayes_main.pdf (7 pages, 277050 bytes).
 PDF statistics:
- 135 PDF objects out of 1000 (max. 8388607)
- 26 named destinations out of 1000 (max. 500000)
+ 162 PDF objects out of 1000 (max. 8388607)
+ 32 named destinations out of 1000 (max. 500000)
  48255 words of extra memory for PDF output out of 51595 (max. 10000000)
 

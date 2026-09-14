@@ -2385,8 +2385,13 @@
     <bcf:citekey order="5" intorder="1">kavlakoglu_naivebayes</bcf:citekey>
     <bcf:citekey order="6" intorder="1">mccallum1998comparison</bcf:citekey>
     <bcf:citekey order="7" intorder="1">atkins2018financial</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">R</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">Bnlearn</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">CN_2022</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">R</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">tetlock2007media</bcf:citekey>
+    <bcf:citekey order="10" intorder="2">tetlock2008more</bcf:citekey>
+    <bcf:citekey order="10" intorder="3">heston2017news</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">malo2014good</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">mccallum1998comparison</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
